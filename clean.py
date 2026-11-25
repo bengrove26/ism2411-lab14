@@ -15,4 +15,18 @@ print("---Exercise 2---")
 
 df.columns = df.columns.str.lower().str.replace(' ', '_')
 
-print(df.columns.tolist()) 
+print(df.columns.tolist())
+
+print("---Exercise 3---")
+
+print("Shape before:", df.shape)
+
+# Drop rows missing order_id or order_date because they are essential and we can't guess them.
+df = df.dropna(subset=['order_id', 'order_date'])
+
+# Fill missing quantity_sold with the mean because we can assume that the missing values are random and not related to any other variable.
+df['quantity_sold'] = df['quantity_sold'].fillna(df['quantity_sold'].mean())
+
+print("Shape after:", df.shape)
+print(df.isnull().sum())
+
