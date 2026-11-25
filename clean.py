@@ -57,3 +57,13 @@ print("Shape after:", df.shape)
 print("---Exercise 6---")
 
 print(df.describe())
+
+# 1 One suspicious stat is the max quantity sold is 9999 which is so much higher than the 75% quantile of 7. A business explanation for this is that it is probably just a place holder value for a missing value.
+# 2 Another suspicious stat is the min revenue of -3268. This could potentally be a refund or a return, but it could also be a input error. 
+
+df = df[df['quantity_sold'] != 9999]
+print("Shape after dropping 9999s:", df.shape)
+print(df.describe())
+
+# I am dropping this row because it is only one row and most likely an input error or place holder value. 
+
