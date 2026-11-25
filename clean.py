@@ -67,3 +67,12 @@ print(df.describe())
 
 # I am dropping this row because it is only one row and most likely an input error or place holder value. 
 
+print("---Exercise 7---")
+
+df.to_csv('data/clean_sales.csv', index=False)
+
+check = pd.read_csv('data/clean_sales.csv')
+check.info()
+
+check = pd.read_csv('data/clean_sales.csv', parse_dates=['order_date'])
+check.info()
