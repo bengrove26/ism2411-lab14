@@ -47,3 +47,13 @@ df['quantity_sold'] = df['quantity_sold'].round().astype(int)
 df['revenue'] = (df['unit_price'] * df['quantity_sold']).round(2)
 
 print(df.dtypes)
+
+print("---Exercise 5---")
+
+print("Duplicates before:", df.duplicated().sum())
+df = df.drop_duplicates()
+print("Shape after:", df.shape)
+
+print("---Exercise 6---")
+
+print(df.describe())
