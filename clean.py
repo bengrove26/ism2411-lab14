@@ -1,3 +1,7 @@
+# Self Assesment 1 - I think drop feels the most ambiguous because it could just be an outlier and not an error. 
+# Self Assesment 2 - Yes they would know what I was doing because each of my comments say what I did and then say "because of this" and then explain why I did it.
+# Self Assesment 3 - The most important thing I noticed was that it gave me each quartile. This is important because it allows me to see if there are any outliers or suspicious values in the data.
+
 import pandas as pd
 
 print("---Exercise 1---")
